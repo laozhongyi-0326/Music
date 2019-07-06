@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐列表</title>
+</head>
+<body>
+<ul>
+    {% for key in music_item_list %}
+        <li>
+            <a href="{{ key.play_url }}">{{ key.song_name }}</a>
+            <span>{{ key.songer_name }}</span>
+        </li>
+    {% empty %}
+        <li>没有搜到对应的歌曲</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
